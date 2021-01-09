@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список квартир</title>
+    <link rel="stylesheet" href="../css/style.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header" id="apartments">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="header__top">
+                        <a class="header__top--link cabinet" href="#">Личный кабинет</a>
+                        <a class="header__top--link bookmarks" href="#">Закладки</a>
+                        <a class="header__top--link comparison" href="#">Сравнение</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <div class="header__image">
+                        <img class="header__general--logo" src="./../images/logo.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 block-for-desktop">
+                    <nav class="header__menu">
+                        <ul class="header__menu--items">
+                            <li class="header__menu--item">
+                                <a class="header__menu--link" href="../index.html" id="main-link">Главная</a>
+                            </li>
+                            <li class="header__menu--item">
+                                <a class="header__menu--link" href="apartments.html"
+                                    id="apartments-link">Квартиры</a>
+                            </li>
+                            <li class="header__menu--item">
+                                <a class="header__menu--link" href="#" id="jk-link">ЖК</a>
+                            </li>
+                            <li class="header__menu--item">
+                                <a class="header__menu--link" href="#" id="mortgage-link">Ипотека</a>
+                            </li>
+                            <li class="header__menu--item">
+                                <a class="header__menu--link" href="#" id="stock-link">Акции</a>
+                            </li>
+                            <li class="header__menu--item">
+                                <a class="header__menu--link" href="#" id="contacts-link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-4 block-for-desktop">
+                    <div class="header__feedback">
+                        <a class="header__feedback--link" href="tel:+78612043247">8 (861) 204-32-47</a>
+                        <button class="general-button header__feedback--button">Обратный звонок</button>
+                    </div>
+                </div>
+                <div class="col-10 block-for-adaptive">
+                    <div class="burger-button">
+                        <div class="hamburger hamburger--collapse hamburger--collapse" id="hamburgerButton">
+                            <div class="hamburger-box">
+                                <div class="hamburger-inner"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-adaptive-menu disactive" id="adaptive-menu">
+                    <div class="container">
+                        <div class="menu-container">
+                            <nav class="burger__menu">
+                                <ul class="burger__menu--items header-items">
+                                    <li class="burger__menu--item">
+                                        <a class="burger__menu--link header__top--link cabinet" href="#">Личный
+                                            кабинет</a>
+                                    </li>
+                                    <li class="burger__menu--item">
+                                        <a class="burger__menu--link header__top--link bookmarks" href="#">Закладки</a>
+                                    </li>
+                                    <li class="burger__menu--item">
+                                        <a class="burger__menu--link header__top--link comparison"
+                                            href="#">Сравнение</a>
+                                    </li>
+                                </ul>
+                                <ul class="burger__menu--items">
+                                    <li class="burger__menu--item">
+                                        <a class="burger__menu--link" href="../index.html">Главная</a>
+                                    </li>
+                                    <li class="burger__menu--item">
+                                        <a class="burger__menu--link"
+                                            href="apartments/apartments.html">Квартиры</a>
+                                    </li>
+                                    <li class="burger__menu--item">
+                                        <a class="burger__menu--link" href="#">ЖК</a>
+                                    </li>
+                                    <li class="burger__menu--item">
+                                        <a class="burger__menu--link" href="#">Ипотека</a>
+                                    </li>
+                                    <li class="burger__menu--item">
+                                        <a class="burger__menu--link" href="#">Акции</a>
+                                    </li>
+                                    <li class="burger__menu--item">
+                                        <a class="burger__menu--link" href="#">Контакты</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="t-spacer-static"></div>
+                            <div class="t-spacer"></div>
+                            <div class="burger__feedback">
+                                <a class="header__feedback--link" href="tel:+78612043247">8 (861) 204-32-47</a>
+                                <button
+                                    class="general-button header__feedback--button burger__feedback--button">Обратный
+                                    звонок</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="filters">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="filters__title">Купить квартиру в новостройке</h2>
+                </div>
+            </div>
+            <div class="filters__selects">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="filter__select border-none">
+                            <select class="filters__selects--item border-none" name="city">
+                                <option class="select-disabled" disabled>Выберите город</option>
+                                <option class="select-option">Краснодар</option>
+                                <option class="select-option">Москва</option>
+                                <option class="select-option">Санкт-Петербург</option>
+                                <option class="select-option">Омск</option>
+                            </select>
+                            <div class="filter__selects--title">Город</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="filter__select">
+                            <select class="filters__selects--item border-none" name="district">
+                                <option class="select-disabled" disabled>Выберите район</option>
+                                <option class="select-option">ФМР</option>
+                            </select>
+                            <div class="filter__selects--title">Район</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="filter__select">
+                            <select class="filters__selects--item border-none" name="complex">
+                                <option class="select-disabled" disabled>Выберите жилой комплекс</option>
+                                <option class="select-option">ЖК «Маршал»</option>
+                            </select>
+                            <div class="filter__selects--title">Жилой комплекс</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="filter__select">
+                            <select class="filters__selects--item border-none" name="rooms">
+                                <option class="select-disabled" disabled>Выберите количество комнат</option>
+                                <option class="select-option">1</option>
+                                <option class="select-option">2</option>
+                                <option class="select-option">3</option>
+                                <option class="select-option">4</option>
+                            </select>
+                            <div class="filter__selects--title">Комнат</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 pr-md-1">
+                        <div class="filter__inputs">
+                            <input class="filter__inputs--item border-none" id="input-area-from" type="text">
+                            <div class="filter__inputs--title">Площадь от</div>
+                            <input class="filter__inputs--range" id="range-area-from" type="range" min="1" max="1000">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 pl-md-0">
+                        <div class="filter__inputs">
+                            <input class="filter__inputs--item border-none" id="input-area-up-to" type="text">
+                            <div class="filter__inputs--title">Площадь до</div>
+                            <input class="filter__inputs--range" id="range-area-up-to" type="range" min="1" max="1000">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 pr-md-1">
+                        <div class="filter__inputs">
+                            <input class="filter__inputs--item border-none" id="input-cost-from" type="text">
+                            <div class="filter__inputs--title">Стоимость от, ₽</div>
+                            <input class="filter__inputs--range" id="range-cost-from" type="range" min="1000000"
+                                max="100000000">
+                            <label class="filter__check-box">
+                                <input class="filter__check-box--checkbox" type="checkbox">
+                                <span class="filter__check-box--checkstyle"></span>
+                                <p class="filter__check-box--text">Квартира со скидкой</p>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 pl-md-0">
+                        <div class="filter__inputs">
+                            <input class="filter__inputs--item border-none" id="input-cost-up-to" type="text">
+                            <div class="filter__inputs--title">Стоимость до, ₽</div>
+                            <input class="filter__inputs--range" id="range-cost-up-to" type="range" min="1000000"
+                                max="100000000">
+                        </div>
+                    </div>
+                </div>
+                <div class="filters__details" id="details-filter">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3 pr-lg-1">
+                            <div class="filter__select">
+                                <select class="filters__selects--item border-none" name="timing_before">
+                                    <option class="select-disabled" disabled>Выберите сроки сдачи</option>
+                                    <option class="select-option">1 квартал 2019</option>
+                                    <option class="select-option">2 квартал 2019</option>
+                                    <option class="select-option">3 квартал 2019</option>
+                                    <option class="select-option">4 квартал 2019</option>
+                                </select>
+                                <div class="filter__selects--title">Срок сдачи от</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 pl-lg-0">
+                            <div class="filter__select">
+                                <select class="filters__selects--item border-none" name="timing_after">
+                                    <option class="select-disabled" disabled>Выберите сроки сдачи</option>
+                                    <option class="select-option">1 квартал 2019</option>
+                                    <option class="select-option">2 квартал 2019</option>
+                                    <option class="select-option">3 квартал 2019</option>
+                                    <option class="select-option">4 квартал 2019</option>
+                                </select>
+                                <div class="filter__selects--title">Срок сдачи до</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="filter__select">
+                                <select class="filters__selects--item border-none" name="parking">
+                                    <option class="select-disabled" disabled>Выберите подходящий вариант</option>
+                                    <option class="select-option">Нужна</option>
+                                    <option class="select-option">Ненужна</option>
+                                </select>
+                                <div class="filter__selects--title">Парковка</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="filter__select">
+                                <select class="filters__selects--item border-none" name="rooms">
+                                    <option class="select-disabled" disabled>Выберите подходящий вариант</option>
+                                    <option class="select-option">Нужна</option>
+                                    <option class="select-option">Ненужна</option>
+                                </select>
+                                <div class="filter__selects--title">Колясочная</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="filters__check-box">
+                                <label class="filter__check-box">
+                                    <input class="filter__check-box--checkbox" type="checkbox">
+                                    <span class="filter__check-box--checkstyle"></span>
+                                    <p class="filter__check-box--text">Только сданые</p>
+                                </label>
+                                <label class="filter__check-box">
+                                    <input class="filter__check-box--checkbox" type="checkbox">
+                                    <span class="filter__check-box--checkstyle"></span>
+                                    <p class="filter__check-box--text">Строится, но есть сданные</p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3 pr-lg-1">
+                            <div class="filter__inputs">
+                                <input class="filter__inputs--item border-none" id="input-kitchen-from" type="text">
+                                <div class="filter__inputs--title">Площадь кухни от</div>
+                                <input class="filter__inputs--range" id="range-kitchen-from" type="range" min="1"
+                                    max="1000">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 pl-lg-0">
+                            <div class="filter__inputs">
+                                <input class="filter__inputs--item border-none" id="input-kitchen-up-to" type="text">
+                                <div class="filter__inputs--title">Площадь кухни до</div>
+                                <input class="filter__inputs--range" id="range-kitchen-up-to" type="range" min="1"
+                                    max="1000">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="filter__select">
+                                <select class="filters__selects--item border-none" name="material">
+                                    <option class="select-disabled" disabled>Выберите материал</option>
+                                    <option class="select-option">Монолит</option>
+                                </select>
+                                <div class="filter__selects--title">Материал</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="filter__select">
+                                <select class="filters__selects--item border-none" name="details">
+                                    <option class="select-disabled" disabled>Выберите доп. услуги</option>
+                                    <option class="select-option">Отделка</option>
+                                </select>
+                                <div class="filter__selects--title">Доп услуги</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3 pr-lg-1">
+                            <div class="filter__inputs">
+                                <input class="filter__inputs--item border-none" id="input-floor-from" type="number">
+                                <div class="filter__inputs--title">Этаж от</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 pl-lg-0">
+                            <div class="filter__inputs">
+                                <input class="filter__inputs--item border-none" id="input-floor-up-to" type="number">
+                                <div class="filter__inputs--title">Этаж до</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="filter__select">
+                                <select class="filters__selects--item border-none" name="view">
+                                    <option class="select-disabled" disabled>Выберите вид</option>
+                                    <option class="select-option">На улицу</option>
+                                </select>
+                                <div class="filter__selects--title">Вид из окон</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="filter__select">
+                                <select class="filters__selects--item border-none" name="balcony">
+                                    <option class="select-disabled" disabled>Выберите подходящий вариант</option>
+                                    <option class="select-option">Неважно</option>
+                                </select>
+                                <div class="filter__selects--title">Балкон</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="filters__check-box">
+                                <label class="filter__check-box">
+                                    <input class="filter__check-box--checkbox" type="checkbox">
+                                    <span class="filter__check-box--checkstyle"></span>
+                                    <p class="filter__check-box--text">Не первый</p>
+                                </label>
+                                <label class="filter__check-box">
+                                    <input class="filter__check-box--checkbox" type="checkbox">
+                                    <span class="filter__check-box--checkstyle"></span>
+                                    <p class="filter__check-box--text">Не последний</p>
+                                </label>
+                                <label class="filter__check-box">
+                                    <input class="filter__check-box--checkbox" type="checkbox">
+                                    <span class="filter__check-box--checkstyle"></span>
+                                    <p class="filter__check-box--text">Последний</p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="filter__select">
+                                <select class="filters__selects--item border-none" name="bathroom">
+                                    <option class="select-disabled" disabled>Выберите cанузел</option>
+                                    <option class="select-option">Раздельный</option>
+                                </select>
+                                <div class="filter__selects--title">Санузел</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="filter__select">
+                                <select class="filters__selects--item border-none" name="ceiling">
+                                    <option class="select-disabled" disabled>Выберите высоту потолка</option>
+                                    <option class="select-option">1 м</option>
+                                    <option class="select-option">2 м</option>
+                                    <option class="select-option">3 м</option>
+                                    <option class="select-option">4 м</option>
+                                </select>
+                                <div class="filter__selects--title">Высота потолка</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="filter__select">
+                                <select class="filters__selects--item border-none" name="class">
+                                    <option class="select-disabled" disabled>Выберите класс</option>
+                                    <option class="select-option">Бизнес</option>
+                                    <option class="select-option">Эконом</option>
+                                </select>
+                                <div class="filter__selects--title">Класс</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="filter__select">
+                                <select class="filters__selects--item border-none" name="territory">
+                                    <option class="select-disabled" disabled>Выберите территорию</option>
+                                    <option class="select-option">Закрытая</option>
+                                    <option class="select-option">Открытая</option>
+                                </select>
+                                <div class="filter__selects--title">Территория</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <a class="filter__details" id="button-details">Еще детали</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <button class="general-button filter__button">Показать – 37 квартир</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="apartments-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="titles">Вам подходят 37 квартир</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="apartments-section__cards">
+                        <div class="apartments-section__card">
+                            <div class="apartments-section__card--slider">
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--1.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--2.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--1.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="apartments-section__card--content">
+                                <div class="apartments-section__content--top">
+                                    <div class="apartments-section__content--left">
+                                        <h3 class="apartments-section__content--title">2-комнатная квартира, 51,8 м²
+                                        </h3>
+                                        <p class="apartments-section__content--text"><span>ЖК «Марсель 2» </span>· литер
+                                            3 · сдача 3 кв. 2019</p>
+                                        <p class="apartments-section__content--text"><span>ул. Валерия Гассия 4/7, 3
+                                                этаж из 8</span></p>
+
+                                        <div class="apartments-section__content--info">
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Жилая площадь</h4>
+                                                <p class="apartments-section__info--text">25,6 м²</p>
+                                            </div>
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Площадь кухни</h4>
+                                                <p class="apartments-section__info--text">11,4 м²</p>
+                                            </div>
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Дополнительная информация
+                                                </h4>
+                                                <p class="apartments-section__info--text">2 балкона, вид во двор</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="apartments-section__content--right">
+                                        <p class="apartments-section__content--title">2 072 000 ₽</p>
+                                        <p class="apartments-section__content--text">40 000 ₽/м²</p>
+                                    </div>
+                                </div>
+                                <div class="apartments-section__content--bottom">
+                                    <div class="builders__content--block-items apartments-checkboxes-items">
+                                        <div class="builders__content--items-svg apartments-checkboxes">
+                                            <label class="apartments-checkbox">
+                                                <input
+                                                    class="general-button builders__content--item-svg booksmark-button"
+                                                    type="checkbox">
+                                                <p class="apartment-checkbox-text">В Избранном</p>
+                                            </label>
+                                            <label class="apartments-checkbox">
+                                                <input class="general-button builders__content--item-svg balance-button"
+                                                    type="checkbox">
+                                                <p class="apartment-checkbox-text">в сравнении</p>
+                                            </label>
+                                        </div>
+                                        <a class="general-button builders__content--details apartments-section__content--button" href="apartment.html">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="apartments-section__card">
+                            <div class="apartments-section__card--slider">
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--1.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--2.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--1.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="apartments-section__card--content">
+                                <div class="apartments-section__content--top">
+                                    <div class="apartments-section__content--left">
+                                        <h3 class="apartments-section__content--title">2-комнатная квартира, 51,8 м²
+                                        </h3>
+                                        <p class="apartments-section__content--text"><span>ЖК «Марсель 2» </span>· литер
+                                            3 · сдача 3 кв. 2019</p>
+                                        <p class="apartments-section__content--text"><span>ул. Валерия Гассия 4/7, 3
+                                                этаж из 8</span></p>
+
+                                        <div class="apartments-section__content--info">
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Жилая площадь</h4>
+                                                <p class="apartments-section__info--text">25,6 м²</p>
+                                            </div>
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Площадь кухни</h4>
+                                                <p class="apartments-section__info--text">11,4 м²</p>
+                                            </div>
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Дополнительная информация
+                                                </h4>
+                                                <p class="apartments-section__info--text">2 балкона, вид во двор</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="apartments-section__content--right">
+                                        <p class="apartments-section__content--title">2 072 000 ₽</p>
+                                        <p class="apartments-section__content--text">40 000 ₽/м²</p>
+                                    </div>
+                                </div>
+                                <div class="apartments-section__content--bottom">
+                                    <div class="builders__content--block-items apartments-checkboxes-items">
+                                        <div class="builders__content--items-svg apartments-checkboxes">
+                                            <label class="apartments-checkbox">
+                                                <input
+                                                    class="general-button builders__content--item-svg booksmark-button"
+                                                    type="checkbox">
+                                                <p class="apartment-checkbox-text">В Избранном</p>
+                                            </label>
+                                            <label class="apartments-checkbox">
+                                                <input class="general-button builders__content--item-svg balance-button"
+                                                    type="checkbox">
+                                                <p class="apartment-checkbox-text">в сравнении</p>
+                                            </label>
+                                        </div>
+                                        <a class="general-button builders__content--details apartments-section__content--button" href="apartment.html">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="apartments-section__card">
+                            <div class="apartments-section__card--slider">
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--1.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--2.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--1.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="apartments-section__card--content">
+                                <div class="apartments-section__content--top">
+                                    <div class="apartments-section__content--left">
+                                        <h3 class="apartments-section__content--title">2-комнатная квартира, 51,8 м²
+                                        </h3>
+                                        <p class="apartments-section__content--text"><span>ЖК «Марсель 2» </span>· литер
+                                            3 · сдача 3 кв. 2019</p>
+                                        <p class="apartments-section__content--text"><span>ул. Валерия Гассия 4/7, 3
+                                                этаж из 8</span></p>
+
+                                        <div class="apartments-section__content--info">
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Жилая площадь</h4>
+                                                <p class="apartments-section__info--text">25,6 м²</p>
+                                            </div>
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Площадь кухни</h4>
+                                                <p class="apartments-section__info--text">11,4 м²</p>
+                                            </div>
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Дополнительная информация
+                                                </h4>
+                                                <p class="apartments-section__info--text">2 балкона, вид во двор</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="apartments-section__content--right">
+                                        <p class="apartments-section__content--title">2 072 000 ₽</p>
+                                        <p class="apartments-section__content--text">40 000 ₽/м²</p>
+                                    </div>
+                                </div>
+                                <div class="apartments-section__content--bottom">
+                                    <div class="builders__content--block-items apartments-checkboxes-items">
+                                        <div class="builders__content--items-svg apartments-checkboxes">
+                                            <label class="apartments-checkbox">
+                                                <input
+                                                    class="general-button builders__content--item-svg booksmark-button"
+                                                    type="checkbox">
+                                                <p class="apartment-checkbox-text">В Избранном</p>
+                                            </label>
+                                            <label class="apartments-checkbox">
+                                                <input class="general-button builders__content--item-svg balance-button"
+                                                    type="checkbox">
+                                                <p class="apartment-checkbox-text">в сравнении</p>
+                                            </label>
+                                        </div>
+                                        <a class="general-button builders__content--details apartments-section__content--button" href="apartment.html">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="apartments-section__card">
+                            <div class="apartments-section__card--slider">
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--1.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--2.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--1.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="apartments-section__card--content">
+                                <div class="apartments-section__content--top">
+                                    <div class="apartments-section__content--left">
+                                        <h3 class="apartments-section__content--title">2-комнатная квартира, 51,8 м²
+                                        </h3>
+                                        <p class="apartments-section__content--text"><span>ЖК «Марсель 2» </span>· литер
+                                            3 · сдача 3 кв. 2019</p>
+                                        <p class="apartments-section__content--text"><span>ул. Валерия Гассия 4/7, 3
+                                                этаж из 8</span></p>
+
+                                        <div class="apartments-section__content--info">
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Жилая площадь</h4>
+                                                <p class="apartments-section__info--text">25,6 м²</p>
+                                            </div>
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Площадь кухни</h4>
+                                                <p class="apartments-section__info--text">11,4 м²</p>
+                                            </div>
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Дополнительная информация
+                                                </h4>
+                                                <p class="apartments-section__info--text">2 балкона, вид во двор</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="apartments-section__content--right">
+                                        <p class="apartments-section__content--title">2 072 000 ₽</p>
+                                        <p class="apartments-section__content--text">40 000 ₽/м²</p>
+                                    </div>
+                                </div>
+                                <div class="apartments-section__content--bottom">
+                                    <div class="builders__content--block-items apartments-checkboxes-items">
+                                        <div class="builders__content--items-svg apartments-checkboxes">
+                                            <label class="apartments-checkbox">
+                                                <input
+                                                    class="general-button builders__content--item-svg booksmark-button"
+                                                    type="checkbox">
+                                                <p class="apartment-checkbox-text">В Избранном</p>
+                                            </label>
+                                            <label class="apartments-checkbox">
+                                                <input class="general-button builders__content--item-svg balance-button"
+                                                    type="checkbox">
+                                                <p class="apartment-checkbox-text">в сравнении</p>
+                                            </label>
+                                        </div>
+                                        <a class="general-button builders__content--details apartments-section__content--button" href="apartment.html">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="apartments-section__card">
+                            <div class="apartments-section__card--slider">
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--1.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--2.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--1.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="apartments-section__card--content">
+                                <div class="apartments-section__content--top">
+                                    <div class="apartments-section__content--left">
+                                        <h3 class="apartments-section__content--title">2-комнатная квартира, 51,8 м²
+                                        </h3>
+                                        <p class="apartments-section__content--text"><span>ЖК «Марсель 2» </span>· литер
+                                            3 · сдача 3 кв. 2019</p>
+                                        <p class="apartments-section__content--text"><span>ул. Валерия Гассия 4/7, 3
+                                                этаж из 8</span></p>
+
+                                        <div class="apartments-section__content--info">
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Жилая площадь</h4>
+                                                <p class="apartments-section__info--text">25,6 м²</p>
+                                            </div>
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Площадь кухни</h4>
+                                                <p class="apartments-section__info--text">11,4 м²</p>
+                                            </div>
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Дополнительная информация
+                                                </h4>
+                                                <p class="apartments-section__info--text">2 балкона, вид во двор</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="apartments-section__content--right">
+                                        <p class="apartments-section__content--title">2 072 000 ₽</p>
+                                        <p class="apartments-section__content--text">40 000 ₽/м²</p>
+                                    </div>
+                                </div>
+                                <div class="apartments-section__content--bottom">
+                                    <div class="builders__content--block-items apartments-checkboxes-items">
+                                        <div class="builders__content--items-svg apartments-checkboxes">
+                                            <label class="apartments-checkbox">
+                                                <input
+                                                    class="general-button builders__content--item-svg booksmark-button"
+                                                    type="checkbox">
+                                                <p class="apartment-checkbox-text">В Избранном</p>
+                                            </label>
+                                            <label class="apartments-checkbox">
+                                                <input class="general-button builders__content--item-svg balance-button"
+                                                    type="checkbox">
+                                                <p class="apartment-checkbox-text">в сравнении</p>
+                                            </label>
+                                        </div>
+                                        <a class="general-button builders__content--details apartments-section__content--button" href="apartment.html">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <div class="banner">
+                            <div class="banner__content">
+                                <h2 class="banner__content--title">Детские сады, школы, игровые площадки и дворы-парки
+                                </h2>
+                                <button class="general-button banner__content--btn">Узнать больше</button>
+                            </div>
+                            <div class="banner__image">
+                                <img class="banner__image--img" src="./../images/banner-image-1.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="apartments-section__card">
+                            <div class="apartments-section__card--slider">
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--1.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--2.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--1.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="apartments-section__card--content">
+                                <div class="apartments-section__content--top">
+                                    <div class="apartments-section__content--left">
+                                        <h3 class="apartments-section__content--title">2-комнатная квартира, 51,8 м²
+                                        </h3>
+                                        <p class="apartments-section__content--text"><span>ЖК «Марсель 2» </span>· литер
+                                            3 · сдача 3 кв. 2019</p>
+                                        <p class="apartments-section__content--text"><span>ул. Валерия Гассия 4/7, 3
+                                                этаж из 8</span></p>
+
+                                        <div class="apartments-section__content--info">
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Жилая площадь</h4>
+                                                <p class="apartments-section__info--text">25,6 м²</p>
+                                            </div>
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Площадь кухни</h4>
+                                                <p class="apartments-section__info--text">11,4 м²</p>
+                                            </div>
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Дополнительная информация
+                                                </h4>
+                                                <p class="apartments-section__info--text">2 балкона, вид во двор</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="apartments-section__content--right">
+                                        <p class="apartments-section__content--title">2 072 000 ₽</p>
+                                        <p class="apartments-section__content--text">40 000 ₽/м²</p>
+                                    </div>
+                                </div>
+                                <div class="apartments-section__content--bottom">
+                                    <div class="builders__content--block-items apartments-checkboxes-items">
+                                        <div class="builders__content--items-svg apartments-checkboxes">
+                                            <label class="apartments-checkbox">
+                                                <input
+                                                    class="general-button builders__content--item-svg booksmark-button"
+                                                    type="checkbox">
+                                                <p class="apartment-checkbox-text">В Избранном</p>
+                                            </label>
+                                            <label class="apartments-checkbox">
+                                                <input class="general-button builders__content--item-svg balance-button"
+                                                    type="checkbox">
+                                                <p class="apartment-checkbox-text">в сравнении</p>
+                                            </label>
+                                        </div>
+                                        <a class="general-button builders__content--details apartments-section__content--button" href="apartment.html">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="apartments-section__card">
+                            <div class="apartments-section__card--slider">
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--1.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--2.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--1.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="apartments-section__card--content">
+                                <div class="apartments-section__content--top">
+                                    <div class="apartments-section__content--left">
+                                        <h3 class="apartments-section__content--title">2-комнатная квартира, 51,8 м²
+                                        </h3>
+                                        <p class="apartments-section__content--text"><span>ЖК «Марсель 2» </span>· литер
+                                            3 · сдача 3 кв. 2019</p>
+                                        <p class="apartments-section__content--text"><span>ул. Валерия Гассия 4/7, 3
+                                                этаж из 8</span></p>
+
+                                        <div class="apartments-section__content--info">
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Жилая площадь</h4>
+                                                <p class="apartments-section__info--text">25,6 м²</p>
+                                            </div>
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Площадь кухни</h4>
+                                                <p class="apartments-section__info--text">11,4 м²</p>
+                                            </div>
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Дополнительная информация
+                                                </h4>
+                                                <p class="apartments-section__info--text">2 балкона, вид во двор</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="apartments-section__content--right">
+                                        <p class="apartments-section__content--title">2 072 000 ₽</p>
+                                        <p class="apartments-section__content--text">40 000 ₽/м²</p>
+                                    </div>
+                                </div>
+                                <div class="apartments-section__content--bottom">
+                                    <div class="builders__content--block-items apartments-checkboxes-items">
+                                        <div class="builders__content--items-svg apartments-checkboxes">
+                                            <label class="apartments-checkbox">
+                                                <input
+                                                    class="general-button builders__content--item-svg booksmark-button"
+                                                    type="checkbox">
+                                                <p class="apartment-checkbox-text">В Избранном</p>
+                                            </label>
+                                            <label class="apartments-checkbox">
+                                                <input class="general-button builders__content--item-svg balance-button"
+                                                    type="checkbox">
+                                                <p class="apartment-checkbox-text">в сравнении</p>
+                                            </label>
+                                        </div>
+                                        <a class="general-button builders__content--details apartments-section__content--button" href="apartment.html">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="apartments-section__card">
+                            <div class="apartments-section__card--slider">
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--1.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--2.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--1.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="apartments-section__card--content">
+                                <div class="apartments-section__content--top">
+                                    <div class="apartments-section__content--left">
+                                        <h3 class="apartments-section__content--title">2-комнатная квартира, 51,8 м²
+                                        </h3>
+                                        <p class="apartments-section__content--text"><span>ЖК «Марсель 2» </span>· литер
+                                            3 · сдача 3 кв. 2019</p>
+                                        <p class="apartments-section__content--text"><span>ул. Валерия Гассия 4/7, 3
+                                                этаж из 8</span></p>
+
+                                        <div class="apartments-section__content--info">
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Жилая площадь</h4>
+                                                <p class="apartments-section__info--text">25,6 м²</p>
+                                            </div>
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Площадь кухни</h4>
+                                                <p class="apartments-section__info--text">11,4 м²</p>
+                                            </div>
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Дополнительная информация
+                                                </h4>
+                                                <p class="apartments-section__info--text">2 балкона, вид во двор</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="apartments-section__content--right">
+                                        <p class="apartments-section__content--title">2 072 000 ₽</p>
+                                        <p class="apartments-section__content--text">40 000 ₽/м²</p>
+                                    </div>
+                                </div>
+                                <div class="apartments-section__content--bottom">
+                                    <div class="builders__content--block-items apartments-checkboxes-items">
+                                        <div class="builders__content--items-svg apartments-checkboxes">
+                                            <label class="apartments-checkbox">
+                                                <input
+                                                    class="general-button builders__content--item-svg booksmark-button"
+                                                    type="checkbox">
+                                                <p class="apartment-checkbox-text">В Избранном</p>
+                                            </label>
+                                            <label class="apartments-checkbox">
+                                                <input class="general-button builders__content--item-svg balance-button"
+                                                    type="checkbox">
+                                                <p class="apartment-checkbox-text">в сравнении</p>
+                                            </label>
+                                        </div>
+                                        <a class="general-button builders__content--details apartments-section__content--button" href="apartment.html">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="apartments-section__card">
+                            <div class="apartments-section__card--slider">
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--1.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--2.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--1.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="apartments-section__card--content">
+                                <div class="apartments-section__content--top">
+                                    <div class="apartments-section__content--left">
+                                        <h3 class="apartments-section__content--title">2-комнатная квартира, 51,8 м²
+                                        </h3>
+                                        <p class="apartments-section__content--text"><span>ЖК «Марсель 2» </span>· литер
+                                            3 · сдача 3 кв. 2019</p>
+                                        <p class="apartments-section__content--text"><span>ул. Валерия Гассия 4/7, 3
+                                                этаж из 8</span></p>
+
+                                        <div class="apartments-section__content--info">
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Жилая площадь</h4>
+                                                <p class="apartments-section__info--text">25,6 м²</p>
+                                            </div>
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Площадь кухни</h4>
+                                                <p class="apartments-section__info--text">11,4 м²</p>
+                                            </div>
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Дополнительная информация
+                                                </h4>
+                                                <p class="apartments-section__info--text">2 балкона, вид во двор</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="apartments-section__content--right">
+                                        <p class="apartments-section__content--title">2 072 000 ₽</p>
+                                        <p class="apartments-section__content--text">40 000 ₽/м²</p>
+                                    </div>
+                                </div>
+                                <div class="apartments-section__content--bottom">
+                                    <div class="builders__content--block-items apartments-checkboxes-items">
+                                        <div class="builders__content--items-svg apartments-checkboxes">
+                                            <label class="apartments-checkbox">
+                                                <input
+                                                    class="general-button builders__content--item-svg booksmark-button"
+                                                    type="checkbox">
+                                                <p class="apartment-checkbox-text">В Избранном</p>
+                                            </label>
+                                            <label class="apartments-checkbox">
+                                                <input class="general-button builders__content--item-svg balance-button"
+                                                    type="checkbox">
+                                                <p class="apartment-checkbox-text">в сравнении</p>
+                                            </label>
+                                        </div>
+                                        <a class="general-button builders__content--details apartments-section__content--button" href="apartment.html">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="apartments-section__card">
+                            <div class="apartments-section__card--slider">
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--1.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--2.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--1.png" alt="">
+                                </div>
+                                <div class="apartments-section__slider">
+                                    <img class="apartments-section__slider--img"
+                                        src="./../images/apartment-slider-img--2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="apartments-section__card--content">
+                                <div class="apartments-section__content--top">
+                                    <div class="apartments-section__content--left">
+                                        <h3 class="apartments-section__content--title">2-комнатная квартира, 51,8 м²
+                                        </h3>
+                                        <p class="apartments-section__content--text"><span>ЖК «Марсель 2» </span>· литер
+                                            3 · сдача 3 кв. 2019</p>
+                                        <p class="apartments-section__content--text"><span>ул. Валерия Гассия 4/7, 3
+                                                этаж из 8</span></p>
+
+                                        <div class="apartments-section__content--info">
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Жилая площадь</h4>
+                                                <p class="apartments-section__info--text">25,6 м²</p>
+                                            </div>
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Площадь кухни</h4>
+                                                <p class="apartments-section__info--text">11,4 м²</p>
+                                            </div>
+                                            <div class="apartments-section__info--item">
+                                                <h4 class="apartments-section__info--title">Дополнительная информация
+                                                </h4>
+                                                <p class="apartments-section__info--text">2 балкона, вид во двор</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="apartments-section__content--right">
+                                        <p class="apartments-section__content--title">2 072 000 ₽</p>
+                                        <p class="apartments-section__content--text">40 000 ₽/м²</p>
+                                    </div>
+                                </div>
+                                <div class="apartments-section__content--bottom">
+                                    <div class="builders__content--block-items apartments-checkboxes-items">
+                                        <div class="builders__content--items-svg apartments-checkboxes">
+                                            <label class="apartments-checkbox">
+                                                <input
+                                                    class="general-button builders__content--item-svg booksmark-button"
+                                                    type="checkbox">
+                                                <p class="apartment-checkbox-text">В Избранном</p>
+                                            </label>
+                                            <label class="apartments-checkbox">
+                                                <input class="general-button builders__content--item-svg balance-button"
+                                                    type="checkbox">
+                                                <p class="apartment-checkbox-text">в сравнении</p>
+                                            </label>
+                                        </div>
+                                        <a class="general-button builders__content--details apartments-section__content--button" href="apartment.html">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <button class="general-button more-apartments">Еще 10 квартир</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="location-promotions">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <form class="location-promotions__form">
+                        <div class="location-promotions__titles">
+                            <h3 class="location-promotions__titles--title">Отслеживать акции</h3>
+                            <p class="location-promotions__titles--text">Получите доступ к специальным предложениям раньше других</p>
+                        </div>
+                        <div class="location-promotions__inputs">
+                            <input class="location-promotions__inputs--input" type="text" placeholder="Электроннная почта">
+                        </div>
+                        <div class="location-promotions__buttons">
+                            <button class="general-button location-promotions__buttons--button" type="submit">Отслеживать</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="header__image">
+                            <img class="header__general--logo" src="./../images/logo.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <nav class="header__menu">
+                            <ul class="header__menu--items">
+                                <li class="header__menu--item">
+                                    <a class="header__menu--link" href="">Главная</a>
+                                </li>
+                                <li class="header__menu--item">
+                                    <a class="header__menu--link" href="">Квартиры</a>
+                                </li>
+                                <li class="header__menu--item">
+                                    <a class="header__menu--link" href="">ЖК</a>
+                                </li>
+                                <li class="header__menu--item">
+                                    <a class="header__menu--link" href="">Ипотека</a>
+                                </li>
+                                <li class="header__menu--item">
+                                    <a class="header__menu--link" href="">Акции</a>
+                                </li>
+                                <li class="header__menu--item">
+                                    <a class="header__menu--link" href="">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="header__feedback">
+                            <a class="header__feedback--link" href="tel:+78612043247">8 (861) 204-32-47</a>
+                            <button class="general-button header__feedback--button">Обратный звонок</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer__bottom">
+                        <span class="footer__bottom--title">
+                            Все права на публикуемые на сайте материалы принадлежат ООО «АСК» © 2012 — 2019
+                        </span>
+                        <div class="footer__bottom--social">
+                            <a class="footer__social--item" href="">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="24" height="24" fill="white" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M21.564 7.67713C21.6961 7.28681 21.564 7 20.9354 7H18.8568C18.3283 7 18.0846 7.24776 17.9525 7.52097C17.9525 7.52097 16.8954 9.80433 15.398 11.2875C14.9135 11.7169 14.6933 11.8535 14.429 11.8535C14.2969 11.8535 14.1057 11.7169 14.1057 11.3266V7.67713C14.1057 7.20875 13.9523 7 13.5118 7H10.2454C9.91516 7 9.71653 7.21739 9.71653 7.42342C9.71653 7.86744 10.4652 7.96984 10.5424 9.21887V11.9316C10.5424 12.5263 10.4212 12.6341 10.1569 12.6341C9.45227 12.6341 7.73818 10.3406 6.72157 7.71615C6.52234 7.20605 6.32251 7 5.79128 7H3.71267C3.11878 7 3 7.24776 3 7.52097C3 8.00888 3.7047 10.4288 6.28117 13.6294C7.99881 15.8152 10.4189 17 12.621 17C13.9423 17 14.1057 16.7368 14.1057 16.2836V14.6316C14.1057 14.1053 14.2309 14.0002 14.6493 14.0002C14.9576 14.0002 15.4861 14.1368 16.7193 15.1907C18.1287 16.4397 18.361 17 19.1538 17H21.2324C21.8263 17 22.1232 16.7368 21.9519 16.2175C21.7644 15.6999 21.0915 14.949 20.1987 14.0588C19.7142 13.5514 18.9875 13.0049 18.7673 12.7317C18.459 12.3804 18.5471 12.2243 18.7673 11.912C18.7673 11.912 21.2998 8.75048 21.564 7.67713Z"
+                                        fill="#CCCCCC" />
+                                </svg>
+                            </a>
+                            <a class="footer__social--item" href="">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="24" height="24" fill="white" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M13 9.5V7.5C13 6.948 13.448 6.5 14 6.5H15V4H13C11.343 4 10 5.343 10 7V9.5H8V12H10V20H13V12H15L16 9.5H13Z"
+                                        fill="#CCCCCC" />
+                                </svg>
+                            </a>
+                            <a class="footer__social--item" href="">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="24" height="24" fill="white" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M11.1449 15.209C9.86874 15.0803 8.71805 14.7765 7.73287 14.0317C7.61063 13.939 7.48442 13.8497 7.37287 13.7462C6.94167 13.3458 6.89822 12.8873 7.23942 12.4148C7.53132 12.0105 8.02132 11.9023 8.53063 12.1345C8.62925 12.1795 8.72322 12.2357 8.81322 12.296C10.6493 13.5155 13.1715 13.5492 15.0144 12.3508C15.197 12.2155 15.3922 12.1052 15.6184 12.0488C16.0582 11.9397 16.4684 12.0958 16.7044 12.4678C16.9741 12.8927 16.9706 13.3073 16.6384 13.6372C16.1287 14.1428 15.5158 14.5087 14.8348 14.764C14.1908 15.0053 13.4855 15.1268 12.7874 15.2075C12.8927 15.3183 12.9424 15.3728 13.0082 15.4368C13.9561 16.3575 14.9082 17.2743 15.853 18.1978C16.1749 18.5125 16.2422 18.9027 16.0649 19.2687C15.8711 19.6687 15.4374 19.9318 15.012 19.9037C14.7425 19.8857 14.5324 19.756 14.3456 19.5742C13.6303 18.8783 12.9015 18.1953 12.2006 17.4863C11.9967 17.2802 11.8986 17.3192 11.7186 17.4982C10.9989 18.2143 10.2675 18.9195 9.53184 19.6207C9.20149 19.9355 8.80839 19.9922 8.42529 19.8123C8.01805 19.6215 7.75891 19.2197 7.77891 18.8158C7.7927 18.5427 7.93167 18.334 8.12563 18.1468C9.06374 17.2413 9.99925 16.3335 10.9351 15.4265C10.997 15.3662 11.0548 15.3022 11.1449 15.209Z"
+                                        fill="#CCCCCC" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M7.79206 8.01852C7.77879 10.2228 9.64568 12.0473 11.9224 12.0548C14.2222 12.0625 16.1021 10.2795 16.1138 8.07968C16.1253 5.82785 14.2762 4.00602 11.9724 4.00002C9.67327 3.99385 7.80517 5.78985 7.79206 8.01852ZM11.9559 6.05689C13.0859 6.05789 13.9876 6.92922 13.9916 8.02372C13.9953 9.11805 13.096 9.99505 11.9664 9.99889C10.8333 10.0029 9.92379 9.13772 9.91535 8.04739C9.90655 6.94289 10.8164 6.05572 11.9559 6.05689Z"
+                                        fill="#CCCCCC" />
+                                </svg>
+                            </a>
+                            <a class="footer__social--item" href="">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="24" height="24" fill="white" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9 4H15C17.761 4 20 6.239 20 9V15C20 17.761 17.761 20 15 20H9C6.239 20 4 17.761 4 15V9C4 6.239 6.239 4 9 4ZM15 18.5C16.93 18.5 18.5 16.93 18.5 15V9C18.5 7.07 16.93 5.5 15 5.5H9C7.07 5.5 5.5 7.07 5.5 9V15C5.5 16.93 7.07 18.5 9 18.5H15Z"
+                                        fill="#CCCCCC" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M8 12C8 9.791 9.791 8 12 8C14.209 8 16 9.791 16 12C16 14.209 14.209 16 12 16C9.791 16 8 14.209 8 12ZM9.5 12C9.5 13.378 10.622 14.5 12 14.5C13.378 14.5 14.5 13.378 14.5 12C14.5 10.621 13.378 9.5 12 9.5C10.622 9.5 9.5 10.621 9.5 12Z"
+                                        fill="#CCCCCC" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M16.2996 8.23299C16.594 8.23299 16.8326 7.99436 16.8326 7.69999C16.8326 7.40562 16.594 7.16699 16.2996 7.16699C16.0052 7.16699 15.7666 7.40562 15.7666 7.69999C15.7666 7.99436 16.0052 8.23299 16.2996 8.23299Z"
+                                        fill="#CCCCCC" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="./../js/libs.min.js"></script>
+    <script src="./../js/globalScripts.js"></script>
+    <script src="./../js/header.js"></script>
+    <script src="./../js/filters.js"></script>
+    <script src="./../js/apartments.js"></script>
+</body>
+
+</html>
